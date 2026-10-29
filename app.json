@@ -7,6 +7,7 @@
     "userInterfaceStyle": "light",
     "backgroundColor": "#F7F8FA",
     "ios": { "supportsTablet": true },
-    "android": { "package": "com.estudos.minhapokedex" }
+    "android": { "package": "com.estudos.minhapokedex" },
+    "web": { "bundler": "metro", "output": "single" }
   }
 }

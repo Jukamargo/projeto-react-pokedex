@@ -76,6 +76,22 @@ Os testes verificam conversão de medidas, validação de IDs, cache, requisiç�
 
 Na instalação inicial, `npm audit` reportou 10 alertas (5 baixos, 2 moderados e 3 altos) na árvore de dependências do Expo e do React Router Native. As correções sugeridas pelo npm mudam versões principais, incluindo regressões de versão do Expo e do Router, e não foram aplicadas. Isso deve ser reavaliado antes de usar este projeto de estudo em produção.
 
+## Deploy na Vercel
+
+A versão web é exportada pelo Expo como uma aplicação estática. O arquivo `vercel.json` configura a instalação com `npm ci`, a build com `npm run build` e a publicação da pasta `dist`. As demais rotas retornam a página inicial da aplicação.
+
+Na Vercel, importe o repositório `Jukamargo/projeto-react-pokedex`, use a raiz do repositório como **Root Directory** e a branch `main` para produção. O **Framework Preset** é **Other**; os comandos e o diretório de saída são definidos pelo `vercel.json`.
+
+Para validar a exportação antes do deploy:
+
+```powershell
+npm.cmd run build
+```
+
+Publique a pasta `dist`, gerada por esse comando. O arquivo `index.js` na raiz do projeto é a entrada do código-fonte e precisa ser compilado pelo Expo; servi-lo diretamente não carrega a interface.
+
+Após enviar mudanças para `main`, a integração do GitHub com a Vercel inicia um novo deploy automaticamente. Se o projeto ainda não estiver conectado à integração, faça um novo deploy pelo painel da Vercel.
+
 ## Gitflow
 
 O repositório usa `main` para versões estáveis e `develop` para integrar as próximas mudanças.
