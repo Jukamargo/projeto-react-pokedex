@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Minha Pokédex",
+    "slug": "minha-pokedex",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F7F8FA",
+    "ios": { "supportsTablet": true },
+    "android": { "package": "com.estudos.minhapokedex" }
+  }
+}
